@@ -18,9 +18,10 @@ nav {
 
 header {
   display: flex;
-  /* margin-top: 2rem; */
+  margin-bottom: 3rem;
   padding-top: 6rem;
 }
+
 header h1 {
   font-weight: bolder;
 }
@@ -32,7 +33,7 @@ header h1 {
 button {
   color: #fff;
   border-radius: 5rem;
-  border: 0;
+  border-style: none;
   padding: 1rem 2rem;
 }
 
@@ -55,18 +56,31 @@ button {
 .line {
   height: 50px;
   width: 0;
-  border-left: 1px solid black;
+  border-left: 1px solid gray;
   margin: auto;
 }
-
 .number {
   color: #000;
   text-align: center;
   margin: 7px 0 1rem;
 }
+.h-line {
+  height: 0;
+  width: 30%;
+  border-top: 1px solid gray;
+  margin: auto;
+}
+.h-number {
+  color: #000;
+  text-align: center;
+  margin: 7px 0 1rem;
+}
+.horizontal-break {
+  display: flex;
+}
 span {
   border-color: aquamarine;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 5rem;
   padding: 9px 12px;
 }
@@ -93,13 +107,13 @@ main h5 {
 main p {
   padding: 0 30rem;
 }
+
 footer {
   display: grid;
-  grid-template-columns: 850px 200px;
+  grid-template-columns: 1fr 230px;
   text-align: center;
-  margin-top: 5rem;
-  border: 1px solid black;
-  padding: 3rem;
+  padding: 5rem;
+  border: 1px solid rgba(74, 150, 166, 0.6);
   background-image: linear-gradient(
       rgba(74, 150, 166, 0.6),
       rgba(74, 150, 166, 0.6)
@@ -108,12 +122,150 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 2rem;
 }
+
 footer button {
   background-color: #8660ae;
+  padding: 1rem;
 }
 footer p {
   color: #fff;
-  text-align: center;
-  padding: 0 2rem;
+  padding: 0 10rem;
+}
+
+.horizontal-break {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  header img {
+    display: none;
+  }
+
+  header button {
+    display: block;
+    margin: auto;
+  }
+
+  #download {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  #second_button {
+    padding: 1rem 3.3rem;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+  .horizontal-break {
+    display: flex;
+  }
+
+  #images {
+    display: block;
+    margin: 3rem;
+  }
+  #images img {
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+  }
+
+  main p {
+    padding: 0 2rem 2rem;
+  }
+  main h1 {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding: 2rem;
+    border: 1px solid rgba(74, 150, 166, 0.6);
+    background-image: linear-gradient(
+        rgba(74, 150, 166, 0.6),
+        rgba(74, 150, 166, 0.6)
+      ),
+      url(./assets/mobile/image-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  footer p {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 1199px) {
+  header img {
+    display: none;
+  }
+  header {
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(./assets/tablet/image-hero.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+  #header-text {
+    text-align: center;
+    padding: 1 5rem;
+    color: #fff;
+    margin-top: 3rem;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .horizontal-break {
+    display: flex;
+  }
+  #images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 5rem;
+    column-gap: 2rem;
+  }
+
+  #images img {
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+  main p {
+    padding: 0 3rem;
+    margin: 0 0rem 3rem;
+  }
+  main h1 {
+    margin-bottom: 0;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid rgba(74, 150, 166, 0.6);
+    background-image: linear-gradient(
+        rgba(74, 150, 166, 0.6),
+        rgba(74, 150, 166, 0.6)
+      ),
+      url(./assets/tablet/image-footer.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  footer p {
+    padding: 0 1rem;
+  }
 }
