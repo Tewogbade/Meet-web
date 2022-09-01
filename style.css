@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  /* margin-top: 2rem; */
+  padding-top: 6rem;
+}
+header h1 {
+  font-weight: bolder;
+}
+#header-text {
+  text-align: center;
+  padding: 0 5rem;
+}
+
+button {
+  color: #fff;
+  border-radius: 5rem;
+  border: 0;
+  padding: 1rem 2rem;
+}
+
+#download:hover,
+#second_button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.7s;
+  outline: 1px solid black;
+}
+
+#download {
+  background-color: #4b97a7;
+  margin-right: 2rem;
+}
+#second_button {
+  background-color: #8660ae;
+}
+
+.line {
+  height: 50px;
+  width: 0;
+  border-left: 1px solid black;
+  margin: auto;
+}
+
+.number {
+  color: #000;
+  text-align: center;
+  margin: 7px 0 1rem;
+}
+span {
+  border-color: aquamarine;
+  border: 1px solid black;
+  border-radius: 5rem;
+  padding: 9px 12px;
+}
+
+#images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 5rem;
+  column-gap: 2rem;
+}
+#images img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main {
+  text-align: center;
+  margin-top: 4rem;
+}
+main h5 {
+  color: rgb(74, 150, 166);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+main p {
+  padding: 0 30rem;
+}
+footer {
+  display: grid;
+  grid-template-columns: 850px 200px;
+  text-align: center;
+  margin-top: 5rem;
+  border: 1px solid black;
+  padding: 3rem;
+  background-image: linear-gradient(
+      rgba(74, 150, 166, 0.6),
+      rgba(74, 150, 166, 0.6)
+    ),
+    url(./assets/desktop/image-footer.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+footer button {
+  background-color: #8660ae;
+}
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 0 2rem;
+}
